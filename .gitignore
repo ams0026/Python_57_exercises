@@ -1,0 +1,9 @@
+#ignore log files
+*.log
+
+#don't commit keys
+*/id_rsa*
+
+#filetype for authorization files
+*/*.nogit
+
