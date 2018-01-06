@@ -5,5 +5,5 @@
 */id_rsa*
 
 #filetype for authorization files
-*/*.nogit
+*.nogit
 
