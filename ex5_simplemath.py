@@ -1,23 +1,28 @@
 #ex5_simplemath.py
+import sys
 
-inputone = input("What is the first number? ")
-# if inputone.isalpha():
-#     inputone = input(inputone + " is not numeric. Please try again: ")
-# if inputone.isalnum():
-#     inputone = input(inputone + " is not numeric. Please try again: ")
+x, y = None, None
+
+
+while x == None: 
+     inputone = input("What is the first number? ")
+     try:
+          x = int(inputone)
+     except:
+          print('"' + inputone + '" is not numeric. Please try again.')
 
 inputtwo = input("What is the second number? ")
-# if inputtwo.isalpha():
-#     inputtwo = input(inputtwo + " is not numeric. Please try again: ")
-# if inputtwo.isalnum():
-#     inputtwo = input(inputtwo + " is not numeric. Please try again: ")
+try:
+     y = int(inputtwo)
+except:
+     print('"'+ inputtwo + '" is not numeric. Please try again.')
+     sys.exit()
+ex = str(inputone)
+why = str(inputtwo)
 
-x = str(inputone)
-y = str(inputtwo)
-
-print (x + " + " + y +" = " + str(inputone+inputtwo) + "\n" +
-       x + " - " + y +" = " + str(inputone-inputtwo) + "\n" +
-       x + " * " + y +" = " + str(inputone*inputtwo) + "\n" +
-       x + " / " + y +" = " + str(inputone/inputtwo) + "\n" +
-       x + " % " + y +" = " + str(inputone%inputtwo) + "\n" +
-       x + " ** " + y +" = " + str(inputone**inputtwo) + "\n" )
+print (ex + " + " + why +" = " + str(x + y) + "\n" +
+       ex + " - " + why +" = " + str(x - y) + "\n" +
+       ex + " * " + why +" = " + str(x * y) + "\n" +
+       ex + " / " + why +" = " + str(x / y) + "\n" +
+       ex + " % " + why +" = " + str(x % y) + "\n" +
+       ex + " ** " + why +" = " + str(x ** y) + "\n" )
