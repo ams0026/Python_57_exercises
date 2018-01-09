@@ -11,20 +11,25 @@ def baumsweet(numList):
     numList.pop(0)
     numList.pop(0)
     
-    print(numList)
     oddgroup = False
     groupnum = 0
  
     for x in (numList):
-      if x == 0:
+      if x == '0':
           groupnum+=1
       else:
           if groupnum%2==0:
              groupnum = 0
           else:
              oddgroup = True
-
-    return oddgroup
+#evaluate last value
+    if groupnum%2==1:
+       oddgroup = True
+#finish
+    if oddgroup:
+      return 1
+    else:
+      return 0
 
 n = None
 while n == None:
@@ -37,5 +42,8 @@ while n == None:
 
 for i in range(int(n)):
     myBinary = list(bin(int(i)))
-    print(baumsweet(myBinary))
+    print(baumsweet(myBinary),end='')
 
+#incomplete
+#value for 4 should be 1101 (? might be High to low instead of low to high)
+#answer key is here: https://oeis.org/A086747/b086747.txt
