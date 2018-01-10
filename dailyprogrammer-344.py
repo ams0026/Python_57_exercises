@@ -22,14 +22,16 @@ def baumsweet(numList):
              groupnum = 0
           else:
              oddgroup = True
+      if oddgroup:
+        break
 #evaluate last value
     if groupnum%2==1:
        oddgroup = True
 #finish
     if oddgroup:
-      return 1
-    else:
       return 0
+    else:
+      return 1
 
 n = None
 while n == None:
@@ -40,7 +42,7 @@ while n == None:
       n = None
       print("Please enter a decimal number.")
 
-for i in range(int(n)):
+for i in range(int(n),-1,-1):
     myBinary = list(bin(int(i)))
     print(baumsweet(myBinary),end='')
 
